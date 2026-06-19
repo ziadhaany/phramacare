@@ -1,0 +1,266 @@
+/* ========================== BASE ========================== */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eef3ff;
+    color: #1f2933;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================== NAVBAR ========================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 14px 0;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.25);
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ========================== PAGE TITLE ========================== */
+.page-container {
+    width: min(500px, 90%);
+    margin: 40px auto 0 auto;
+    padding: 18px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #dbe1ea;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+    text-align: center;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #0056b3;
+}
+
+/* ========================== FORM CONTAINER ========================== */
+.form-container {
+    width: min(430px, 90%);
+    background-color: #fff;
+    padding: 28px;
+    margin: 20px auto 60px auto;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* ========================== FORM ELEMENTS ========================== */
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    border: 1px solid #cfd8e3;
+    background-color: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.25);
+}
+
+/* ========================== CONTAINERS ========================== */
+.address-box,
+.password-box,
+.user-box {
+    margin-top: 20px;
+    padding: 30px;
+    border: 2px solid #007bff;
+    border-radius: 12px;
+    background: #eef6ff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.address-title,
+.password-title,
+.user-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0056b3;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+.address-box label,
+.password-box label,
+.user-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.address-box input,
+.password-box input,
+.user-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.address-box input:focus,
+.password-box input:focus,
+.user-box input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+/* ========================== ALERT MESSAGES ========================== */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.alert.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.alert.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+/* ========================== ERROR / SUCCESS ========================== */
+.error {
+    font-size: 0.8rem;
+    color: #dc2626;
+    min-height: 14px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.success {
+    text-align: center;
+    margin-top: 10px;
+    color: #16a34a;
+    font-weight: 500;
+}
+
+/* ========================== BUTTON ========================== */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background-color: #0056b3;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.25s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #003f82;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 56, 128, 0.30);
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ========================== LOGIN LINK ========================== */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.login-link a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: #003f82;
+    text-decoration: underline;
+}
+
+/* ========================== VALIDATION HIGHLIGHT ========================== */
+input.valid {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 4px rgba(22, 163, 52, 0.4);
+}
+
+input.invalid {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 4px rgba(220, 38, 38, 0.4);
+}
+
+/* ========================== RESPONSIVE ========================== */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    input,
+    select {
+        font-size: 0.88rem;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .address-box,
+    .password-box,
+    .user-box {
+        padding: 20px;
+    }
+
+    .address-title,
+    .password-title,
+    .user-title {
+        font-size: 18px;
+    }
+}

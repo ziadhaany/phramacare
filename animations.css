@@ -1,0 +1,44 @@
+/* BUTTONS */
+button, .btn {
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+/* COLLAPSIBLE */
+.collapsible {
+    cursor: pointer;
+    user-select: none;
+}
+.collapsible.active {
+    color: #0056b3;
+    font-weight: bold;
+}
+.content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* TOAST NOTIFICATIONS */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #16a34a;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-weight: 500;
+    opacity: 0.95;
+}
+.toast.error {
+    background-color: #dc2626;
+}
+
+/* INPUT FOCUS HIGHLIGHT */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0056b3 !important;
+    box-shadow: 0 0 4px rgba(0,86,179,0.25) !important;
+}

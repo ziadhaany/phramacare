@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaCare • Payment Information</title>
+    <link rel="icon" href="images/icon-pharmacare.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="visa.css">
+
+</head>
+
+<body>
+    <h1>Payment Information</h1>
+    <div class="container">
+        <!-- 3D Card -->
+        <div class="card-scene">
+            <div class="card-object" id="card">
+                <div class="card-face face-front">
+                    <div class="chip"></div>
+                    <div class="card-number-display" id="displayNum">•••• •••• •••• ••••</div>
+                    <div class="card-bottom">
+                        <div class="card-holder-display" id="displayName">FULL NAME</div>
+                        <div>
+                            <span style="font-size:8px;">VALID<br>THRU</span>
+                            <span class="card-expires-display" id="displayDate">••/••</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-face face-back">
+                    <div class="magnetic-strip"></div>
+                    <div class="cvc-label">CVC</div>
+                    <div class="cvc-strip" id="displayCvc">•••</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="payment-form" id="paymentForm">
+            <div class="input-group">
+                <input type="text" id="inputNum" placeholder="Card number" maxlength="19">
+                <div id="errorCard" class="error"><i class="fa-solid fa-circle-exclamation"></i> Card must be 16 digits
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="inputName" placeholder="Full name">
+                <div id="errorName" class="error"><i class="fa-solid fa-circle-exclamation"></i> Name must charset</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="inputDate" placeholder="MM/YY" maxlength="5">
+                <div id="errorMonth" class="error"><i class="fa-solid fa-circle-exclamation"></i> Invalid month</div>
+                <div id="errorYear" class="error"><i class="fa-solid fa-circle-exclamation"></i> Invalid year</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="inputCvc" placeholder="CVC" maxlength="3">
+                <div id="errorCvc" class="error"><i class="fa-solid fa-circle-exclamation"></i> CVC must be 3 digits
+                </div>
+            </div>
+            <button class="btn-submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Visa Popup -->
+    <div id="visaSuccessPopup" class="popup-overlay">
+        <div class="popup-box">
+            <h2>✔️ Payment Successful</h2>
+            <p>Your payment has been processed successfully!</p>
+            <button id="closeVisaPopup">OK</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="visa.js"></script>
+
+</body>
+
+</html>
